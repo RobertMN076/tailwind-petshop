@@ -8,7 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script&family=Londrina+Outline&family=Londrina+Shadow&family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script&family=Londrina+Outline&family=Londrina+Shadow&family=Pacifico&display=swap"
+        rel="stylesheet">
     <style>
         .pacifico-regular {
             font-family: "Pacifico", cursive;
@@ -18,16 +20,16 @@
     </style>
 </head>
 
-<body class="bg-stone-100">
-    <nav class="relative bg-purple-400 items-center flex p-6 md:gap-x-65">
+<body class="bg-stone-200">
+    <nav class="relative bg-purple-300 items-center flex p-6 md:gap-x-65">
         <a href="#" class="hidden sm:flex items-center pacifico-regular text-2xl text-white">
             MiumsPetshop
             <img src="assets/gato-preto.png" alt="logo" width="35px" height="35px">
         </a>
         <form class="flex items-center" role="search">
             <div class="relative">
-                <input class="pacifico-regular rounded-full outline-2 outline-stone-300 p-2 pl-10 md:w-192" type="search"
-                    placeholder="Procurar na Miums..." aria-label="search" />
+                <input class="pacifico-regular rounded-full outline-2 outline-stone-300 p-2 pl-10 md:w-192"
+                    type="search" placeholder="Procurar na Miums..." aria-label="search" />
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <img src="assets/lupa.png" alt="pesquisar" width="20px" height="20px" class="opacity-50">
                 </div>
@@ -53,7 +55,8 @@
         </button>
 
         <!-- Menu suspenso (inicialmente oculto) -->
-        <div id="menu-dropdown" class="mr-10 hidden absolute top-full right-0 bg-purple-400 rounded-bl-lg shadow-md underline decoration-white">
+        <div id="menu-dropdown"
+            class="mr-10 hidden absolute top-full right-0 bg-purple-400 rounded-bl-lg shadow-md underline decoration-white">
             <a href="#" class="block px-4 py-2 text-white">Conta</a>
             <a href="#" class="block px-4 py-2 text-white">Favoritos</a>
             <a href="#" class="block px-4 py-2 text-white">Carrinho</a>
@@ -61,7 +64,61 @@
         </div>
     </nav>
     <br>
-    <div class=" ">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <h1 class="text-center ml-5 pacifico-regular md:col-span-3 md:col-start-2 text-3xl mt-10">
+            Serviços e Produtos
+        </h1>
+    </div>
+    <br>
+    <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-2 bg-purple-300 rounded-full">
+            <img src="assets/brinquedo-de-cachorro.png" alt="brinquedos" width="60px" height="60px">
+            <p class="pacifico-regular text-black text-2xl">Brinquedos</p>
+        </a>
+        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-3 bg-purple-300 rounded-full p-4">
+            <img src="assets/adote.png" alt="brinquedos" width="60px" height="60px">
+            <p class="pacifico-regular text-black text-2xl">Adoções</p>
+        </a>
+        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-4 bg-purple-300 rounded-full p-4">
+            <img src="assets/racao-para-animais.png" alt="brinquedos" width="60px" height="60px">
+            <p class="pacifico-regular text-black text-2xl">Rações</p>
+        </a>
+        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-5 bg-purple-300 rounded-full p-4">
+            <img src="assets/veterinario.png" alt="brinquedos" width="60px" height="60px">
+            <p class="pacifico-regular text-black text-2xl">Veterinários</p>
+        </a>
+        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-6 bg-purple-300 rounded-full p-4">
+            <img src="assets/tosa-de-animais-de-estimacao.png" alt="brinquedos" width="60px" height="60px">
+            <p class="pacifico-regular text-black text-2xl">Banho e Tosa</p>
+        </a>
+    </div>
+    <div class="flex grid grid-cols-1 md:grid-cols-5 gap-4">
+        <h1 class=" text-center ml-5 pacifico-regular md:col-span-3 md:col-start-2 text-3xl mt-20">
+            Categorias por Espécie
+        </h1>
+    </div>
+    <br>
+    <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-2 bg-purple-300 rounded-full p-4">
+            <img src="assets/cao.png" alt="cachorro" width="60px" height="60px">
+            <p class="pacifico-regular text-black text-2xl">Cachorros</p>
+        </a>
+        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-3 bg-purple-300 rounded-full p-4">
+            <img src="assets/gato.png" alt="gato" width="60px" height="60px">
+            <p class="pacifico-regular text-black text-2xl">Gatos</p>
+        </a>
+        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-4 bg-purple-300 rounded-full p-4">
+            <img src="assets/coelho.png" alt="coelho" width="60px" height="60px">
+            <p class="pacifico-regular text-black text-2xl">Coelho</p>
+        </a>
+        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-5 bg-purple-300 rounded-full p-4">
+            <img src="assets/cobra.png" alt="répteis" width="60px" height="60px">
+            <p class="pacifico-regular text-black text-2xl">Répteis</p>
+        </a>
+        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-6 bg-purple-300 rounded-full p-4">
+            <img src="assets/peixe.png" alt="peixe" width="60px" height="60px">
+            <p class="pacifico-regular text-black text-2xl">Peixes</p>
+        </a>
     </div>
     <script src="script.js"></script>
 </body>
