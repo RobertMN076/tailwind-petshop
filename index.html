@@ -9,117 +9,309 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script&family=Londrina+Outline&family=Londrina+Shadow&family=Pacifico&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script&family=Londrina+Outline&family=Londrina+Shadow&family=Pacifico&family=Playwrite+BR:wght@100..400&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
     <style>
         .pacifico-regular {
             font-family: "Pacifico", cursive;
             font-weight: 400;
             font-style: regular;
         }
+
+        .playwrite-br {
+            font-family: "Playwrite BR", cursive;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #c4b5fd; 
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #c4b5fd; 
+        }
     </style>
 </head>
 
-<body class="bg-stone-200">
-    <nav class="relative bg-purple-300 items-center flex p-6 md:gap-x-65">
-        <a href="#" class="hidden sm:flex items-center pacifico-regular text-2xl text-white">
-            MiumsPetshop
-            <img src="assets/gato-preto.png" alt="logo" width="35px" height="35px">
-        </a>
-        <form class="flex items-center" role="search">
-            <div class="relative">
-                <input class="pacifico-regular rounded-full outline-2 outline-stone-300 p-2 pl-10 md:w-192"
-                    type="search" placeholder="Procurar na Miums..." aria-label="search" />
-                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <img src="assets/lupa.png" alt="pesquisar" width="20px" height="20px" class="opacity-50">
+<body class="bg-stone-200 flex flex-col min-h-screen">
+    <header>
+        <nav class="relative bg-purple-300 items-center flex p-6 md:gap-x-65">
+            <a href="#" class="hidden sm:flex items-center pacifico-regular text-2xl text-white">
+                MiumsPetshop
+                <img src="assets/gato-preto.png" alt="logo" width="35px" height="35px">
+            </a>
+            <form class="flex items-center" role="search">
+                <div class="relative">
+                    <input class="pacifico-regular rounded-full outline-2 outline-stone-300 p-2 pl-10 md:w-192"
+                        type="search" placeholder="Procurar na Miums..." aria-label="search" />
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <img src="assets/lupa.png" alt="pesquisar" width="20px" height="20px" class="opacity-50">
+                    </div>
+                </div>
+            </form>
+            <div class="hidden md:flex gap-6">
+                <a href="#"
+                    class="p-2 transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 rounded-full">
+                    <img src="assets/adicionar-usuario.png" alt="conta" width="30px" height="30px">
+                </a>
+                <a href="#"
+                    class="p-2 transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 rounded-full">
+                    <img src="assets/coracao.png" alt="favoritos" width="30px" height="30px">
+                </a>
+                <a href="#"
+                    class="p-2 transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 rounded-full">
+                    <img src="assets/carrinho-de-compras.png" alt="carrinho" width="30px" height="30px">
+                </a>
+                <a href="#"
+                    class="p-2 transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 rounded-full">
+                    <img src="assets/central-de-atendimento.png" alt="ajuda" width="30px" height="30px">
+                </a>
+            </div>
+            <!-- Ícone do menu hambúrguer (visível em telas pequenas) -->
+            <button id="menu-toggle" class="ml-15 md:hidden">
+                <img src="assets/cardapio.png" alt="menu" width="30px" height="30px">
+            </button>
+
+            <!-- Menu suspenso (inicialmente oculto) -->
+            <div id="menu-dropdown"
+                class="mr-10 hidden absolute top-full right-0 bg-purple-400 rounded-bl-lg shadow-md underline decoration-white">
+                <a href="#" class="block px-4 py-2 text-white">Conta</a>
+                <a href="#" class="block px-4 py-2 text-white">Favoritos</a>
+                <a href="#" class="block px-4 py-2 text-white">Carrinho</a>
+                <a href="#" class="block px-4 py-2 text-white">Ajuda</a>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <main class="flex-grow">
+        <div class="swiper meu-carrossel relative max-w-7xl mx-auto">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="assets/Banner02 - Miums.png"
+                        alt="Banner promocional 1" class="block w-full h-auto rounded-2xl">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/Banner01 - Miums.png"
+                        alt="Banner Arraiá Pop" class="block w-full h-auto rounded-2xl">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="assets/Banner03 - Miums (2).png"
+                        alt="Banner promocional 3" class="block w-full h-auto rounded-2xl">
+                </div>
+
+            </div>
+
+            <div class="swiper-button-prev">
+                
+            </div>
+            <div class="swiper-button-next">
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <h1 class="text-center ml-5 playwrite-br md:col-span-3 md:col-start-2 text-3xl mt-10">
+                Serviços e Produtos
+            </h1>
+        </div>
+        <br>
+        <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+            <a href="#"
+                class="transition shadow-lg delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-2 bg-purple-300 rounded-full">
+                <img src="assets/brinquedo-de-cachorro.png" alt="brinquedos" width="60px" height="60px">
+                <p class="playwrite-br text-black text-2xl">Brinquedos</p>
+            </a>
+            <a href="#"
+                class="transition shadow-lg delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-3 bg-purple-300 rounded-full p-4">
+                <img src="assets/adote.png" alt="brinquedos" width="60px" height="60px">
+                <p class="playwrite-br text-black text-2xl">Adoções</p>
+            </a>
+            <a href="#"
+                class="transition shadow-lg delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-4 bg-purple-300 rounded-full p-4">
+                <img src="assets/racao-para-animais.png" alt="brinquedos" width="60px" height="60px">
+                <p class="playwrite-br text-black text-2xl">Rações</p>
+            </a>
+            <a href="#"
+                class="transition shadow-lg delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-5 bg-purple-300 rounded-full p-4">
+                <img src="assets/veterinario.png" alt="brinquedos" width="60px" height="60px">
+                <p class="playwrite-br text-black text-2xl">Veterinários</p>
+            </a>
+            <a href="#"
+                class="transition shadow-lg delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-6 bg-purple-300 rounded-full p-4">
+                <img src="assets/tosa-de-animais-de-estimacao.png" alt="brinquedos" width="60px" height="60px">
+                <p class="playwrite-br text-black text-2xl">Banho e Tosa</p>
+            </a>
+        </div>
+        <div class="flex grid grid-cols-1 md:grid-cols-5 gap-4">
+            <h1 class=" text-center ml-5 playwrite-br md:col-span-3 md:col-start-2 text-3xl mt-20">
+                Categorias por Espécie
+            </h1>
+        </div>
+        <br>
+        <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+            <a href="#"
+                class="transition shadow-lg delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-2 bg-purple-300 rounded-full p-4">
+                <img src="assets/cao.png" alt="cachorro" width="60px" height="60px">
+                <p class="playwrite-br text-black text-2xl">Cachorros</p>
+            </a>
+            <a href="#"
+                class="transition shadow-lg delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-3 bg-purple-300 rounded-full p-4">
+                <img src="assets/gato.png" alt="gato" width="60px" height="60px">
+                <p class="playwrite-br text-black text-2xl">Gatos</p>
+            </a>
+            <a href="#"
+                class="transition shadow-lg delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-4 bg-purple-300 rounded-full p-4">
+                <img src="assets/coelho.png" alt="coelho" width="60px" height="60px">
+                <p class="playwrite-br text-black text-2xl">Coelho</p>
+            </a>
+            <a href="#"
+                class="transition shadow-lg delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-5 bg-purple-300 rounded-full p-4">
+                <img src="assets/cobra.png" alt="répteis" width="60px" height="60px">
+                <p class="playwrite-br text-black text-2xl">Répteis</p>
+            </a>
+            <a href="#"
+                class="transition shadow-lg delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-6 bg-purple-300 rounded-full p-4">
+                <img src="assets/peixe.png" alt="peixe" width="60px" height="60px">
+                <p class="playwrite-br text-black text-2xl">Peixes</p>
+            </a>
+        </div>
+        <br>
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-8 p-4 md:p-8">
+            <div
+                class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 bg-white md:col-start-2 md:col-span-2 rounded-2xl shadow-lg flex items-center overflow-hidden">
+                <img class="w-50 h-full object-cover" src="assets/coelho01.jpg" alt="">
+
+                <div class="p-6 flex flex-col items-start">
+                    <h3 class="text-xl playwrite-br text-gray-800">Ofertas para Coelhos</h3>
+                    <p class="text-sm playwrite-br text-gray-800">até</p>
+
+                    <div class="flex items-baseline my-2">
+                        <span class="text-5xl playwrite-br text-purple-600">50</span>
+                        <span class="text-2xl playwrite-br text-purple-600">% OFF</span>
+                    </div>
+
+                    <a href="#"
+                        class="mt-2 bg-lime-400 text-gray-900 font-semibold px-6 py-2 rounded-full hover:bg-lime-500 transition-colors">
+                        Comprar agora
+                    </a>
                 </div>
             </div>
-        </form>
-        <div class="hidden md:flex gap-6">
-            <a href="#">
-                <img src="assets/adicionar-usuario.png" alt="conta" width="30px" height="30px">
-            </a>
-            <a href="#">
-                <img src="assets/coracao.png" alt="favoritos" width="30px" height="30px">
-            </a>
-            <a href="#">
-                <img src="assets/carrinho-de-compras.png" alt="carrinho" width="30px" height="30px">
-            </a>
-            <a href="#">
-                <img src="assets/central-de-atendimento.png" alt="ajuda" width="30px" height="30px">
-            </a>
-        </div>
-        <!-- Ícone do menu hambúrguer (visível em telas pequenas) -->
-        <button id="menu-toggle" class="ml-15 md:hidden">
-            <img src="assets/cardapio.png" alt="menu" width="30px" height="30px">
-        </button>
 
-        <!-- Menu suspenso (inicialmente oculto) -->
-        <div id="menu-dropdown"
-            class="mr-10 hidden absolute top-full right-0 bg-purple-400 rounded-bl-lg shadow-md underline decoration-white">
-            <a href="#" class="block px-4 py-2 text-white">Conta</a>
-            <a href="#" class="block px-4 py-2 text-white">Favoritos</a>
-            <a href="#" class="block px-4 py-2 text-white">Carrinho</a>
-            <a href="#" class="block px-4 py-2 text-white">Ajuda</a>
+            <div
+                class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 bg-white rounded-2xl shadow-lg md:col-start-4 md:col-span-2 flex items-center overflow-hidden">
+                <img class="w-50 h-full object-cover" src="assets/gato02.jpg" alt="">
+
+                <div class="p-6 flex flex-col items-start">
+                    <h3 class="text-xl playwrite-br text-gray-800">Ofertas para Gatos</h3>
+                    <p class="text-sm playwrite-br text-gray-800">até</p>
+
+                    <div class="flex items-baseline my-2">
+                        <span class="text-5xl playwrite-br text-purple-600">50</span>
+                        <span class="text-2xl playwrite-br text-purple-600">% OFF</span>
+                    </div>
+
+                    <a href="#"
+                        class="mt-2 bg-lime-400 text-gray-900 font-semibold px-6 py-2 rounded-full hover:bg-lime-500 transition-colors">
+                        Comprar agora
+                    </a>
+                </div>
+            </div>
         </div>
-    </nav>
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-8 p-4 md:p-8">
+
+            <div
+                class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 bg-stone-100 md:col-start-2 rounded-2xl shadow-lg flex flex-col items-center overflow-hidden">
+                <img src="assets/racao-coelho.webp" alt="Ração para coelho" class="w-full md:h-70 object-cover">
+
+                <div class="p-10 flex flex-col">
+                    <h3 class="playwrite-br text-2xl">Ração para Coelhos</h3>
+                    <a href="#"
+                        class="mt-10 bg-lime-400 text-gray-900 font-semibold px-6 py-2 rounded-full hover:bg-lime-500 transition-colors flex justify-center items-center">
+                        Comprar agora
+                    </a>
+                </div>
+
+            </div>
+
+            <div
+                class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 bg-stone-100 md:col-start-3 rounded-2xl shadow-lg flex flex-col items-center overflow-hidden">
+                <img src="assets/sache.webp" alt="sache-de-gato-whiskas" class="w-full md:h-70 object-cover">
+
+                <div class="p-10 flex flex-col">
+                    <h3 class="playwrite-br text-2xl">Sachês para Gatos</h3>
+                    <a href="#"
+                        class="mt-10 bg-lime-400 text-gray-900 font-semibold px-6 py-2 rounded-full hover:bg-lime-500 transition-colors flex justify-center items-center">
+                        Comprar agora
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 bg-stone-100 md:col-start-4 rounded-2xl shadow-lg flex flex-col items-center overflow-hidden">
+                <img src="assets/brinquedo-cachorro.webp" alt="brinquedo-de-animais"
+                    class="w-full md:h-70 object-cover">
+
+                <div class="p-10 flex flex-col">
+                    <h3 class="playwrite-br text-2xl">Brinquedos</h3>
+                    <a href="#"
+                        class="mt-10 bg-lime-400 text-gray-900 font-semibold px-6 py-2 rounded-full hover:bg-lime-500 transition-colors flex justify-center items-center">
+                        Comprar agora
+                    </a>
+                </div>
+
+            </div>
+
+            <div
+                class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 bg-stone-100 md:col-start-5 rounded-2xl shadow-lg flex flex-col items-center overflow-hidden">
+                <img src="assets/tapete.webp" alt="tapete-higiênico" class="w-full md:h-70 object-cover">
+
+                <div class="p-10 flex flex-col">
+                    <h3 class="playwrite-br text-2xl">Tapete Higiênico</h3>
+                    <a href="#"
+                        class="mt-10 bg-lime-400 text-gray-900 font-semibold px-6 py-2 rounded-full hover:bg-lime-500 transition-colors flex justify-center items-center">
+                        Comprar agora
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
     <br>
-    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-        <h1 class="text-center ml-5 pacifico-regular md:col-span-3 md:col-start-2 text-3xl mt-10">
-            Serviços e Produtos
-        </h1>
-    </div>
-    <br>
-    <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
-        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-2 bg-purple-300 rounded-full">
-            <img src="assets/brinquedo-de-cachorro.png" alt="brinquedos" width="60px" height="60px">
-            <p class="pacifico-regular text-black text-2xl">Brinquedos</p>
-        </a>
-        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-3 bg-purple-300 rounded-full p-4">
-            <img src="assets/adote.png" alt="brinquedos" width="60px" height="60px">
-            <p class="pacifico-regular text-black text-2xl">Adoções</p>
-        </a>
-        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-4 bg-purple-300 rounded-full p-4">
-            <img src="assets/racao-para-animais.png" alt="brinquedos" width="60px" height="60px">
-            <p class="pacifico-regular text-black text-2xl">Rações</p>
-        </a>
-        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-5 bg-purple-300 rounded-full p-4">
-            <img src="assets/veterinario.png" alt="brinquedos" width="60px" height="60px">
-            <p class="pacifico-regular text-black text-2xl">Veterinários</p>
-        </a>
-        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-6 bg-purple-300 rounded-full p-4">
-            <img src="assets/tosa-de-animais-de-estimacao.png" alt="brinquedos" width="60px" height="60px">
-            <p class="pacifico-regular text-black text-2xl">Banho e Tosa</p>
-        </a>
-    </div>
-    <div class="flex grid grid-cols-1 md:grid-cols-5 gap-4">
-        <h1 class=" text-center ml-5 pacifico-regular md:col-span-3 md:col-start-2 text-3xl mt-20">
-            Categorias por Espécie
-        </h1>
-    </div>
-    <br>
-    <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
-        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-2 bg-purple-300 rounded-full p-4">
-            <img src="assets/cao.png" alt="cachorro" width="60px" height="60px">
-            <p class="pacifico-regular text-black text-2xl">Cachorros</p>
-        </a>
-        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-3 bg-purple-300 rounded-full p-4">
-            <img src="assets/gato.png" alt="gato" width="60px" height="60px">
-            <p class="pacifico-regular text-black text-2xl">Gatos</p>
-        </a>
-        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-4 bg-purple-300 rounded-full p-4">
-            <img src="assets/coelho.png" alt="coelho" width="60px" height="60px">
-            <p class="pacifico-regular text-black text-2xl">Coelho</p>
-        </a>
-        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-5 bg-purple-300 rounded-full p-4">
-            <img src="assets/cobra.png" alt="répteis" width="60px" height="60px">
-            <p class="pacifico-regular text-black text-2xl">Répteis</p>
-        </a>
-        <a href="#" class="transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400 flex flex-col justify-center items-center md:col-start-6 bg-purple-300 rounded-full p-4">
-            <img src="assets/peixe.png" alt="peixe" width="60px" height="60px">
-            <p class="pacifico-regular text-black text-2xl">Peixes</p>
-        </a>
-    </div>
+    <footer class="w-full grid grid-cols-1 md:grid-cols-5 gap-10 bg-purple-300">
+        <div class="md:col-start-2 flex flex-col p-4">
+            <h3 class="pacifico-regular text-2xl">Horário de Funcionamento</h3>
+            <p class="pacifico-regular text-xl mr-15">
+                De segunda à sexta-feira <br> das 8h às 18h
+            </p>
+        </div>
+        <div class="md:col-start-3  flex flex-col p-4">
+            <h3 class="pacifico-regular text-2xl">Entre em Contato</h3>
+            <p class="pacifico-regular text-xl">
+                Telefone: (xx) xxxxx-xxxx <br>
+                Whatsapp: (xx) xxxxx-xxxx <br>
+                sac.ecommerce@miumspetshop.com.br
+            </p>
+        </div>
+        <div class="md:col-start-4 flex flex-col p-4">
+            <h3 class="pacifico-regular text-2xl">Endereço</h3>
+            <p class="pacifico-regular text-xl">
+                Avenida XXXXX, 70 <br>
+                XXXXX <br>
+                Natal RN
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
